@@ -23,15 +23,15 @@
 
 /* ========== CUSTOM 4LIQUID STYLING ========== */
 
-/* Add distinctive borders to all major panels */
+/* Add distinctive borders to all major panels - CYAN THEME */
 .oui-box.oui-rounded-2xl.oui-bg-base-9 {
-  border: 1px solid rgba(220, 180, 50, 0.15) !important;
+  border: 1px solid rgba(0, 212, 170, 0.15) !important;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Markets panel - gold left border accent */
+/* Markets panel - cyan left border accent */
 #oui-side-markets {
-  border-left: 2px solid rgba(220, 180, 50, 0.4) !important;
+  border-left: 2px solid rgba(0, 212, 170, 0.5) !important;
   border-radius: 12px !important;
 }
 
@@ -64,10 +64,10 @@
   border-radius: 8px !important;
 }
 
-/* Tabs - gold accent on active */
+/* Tabs - cyan accent on active */
 .oui-tab-trigger[data-state="active"] {
-  background: rgba(220, 180, 50, 0.15) !important;
-  border-bottom: 2px solid rgb(220, 180, 50) !important;
+  background: rgba(0, 212, 170, 0.15) !important;
+  border-bottom: 2px solid rgb(0, 212, 170) !important;
 }
 
 /* Cards and panels - increased spacing */
@@ -78,31 +78,31 @@
   padding: 12px !important;
 }
 
-/* Input fields - gold focus border */
+/* Input fields - cyan focus border */
 input:focus,
 .oui-input-root:focus-within {
-  outline: 2px solid rgba(220, 180, 50, 0.3) !important;
+  outline: 2px solid rgba(0, 212, 170, 0.4) !important;
   outline-offset: 0 !important;
 }
 
-/* Buttons - enhanced styling */
+/* Buttons - enhanced styling with cyan gradient */
 button.oui-bg-primary {
-  background: linear-gradient(135deg, rgb(220, 180, 50), rgb(240, 200, 80)) !important;
+  background: linear-gradient(135deg, rgb(0, 212, 170), rgb(41, 233, 200)) !important;
   font-weight: 600 !important;
   letter-spacing: 0.02em !important;
-  box-shadow: 0 2px 8px rgba(220, 180, 50, 0.2) !important;
+  box-shadow: 0 2px 12px rgba(0, 212, 170, 0.3) !important;
 }
 
 button.oui-bg-primary:hover {
-  box-shadow: 0 4px 12px rgba(220, 180, 50, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(0, 212, 170, 0.4) !important;
   transform: translateY(-1px);
   transition: all 0.2s ease;
 }
 
-/* Navigation bar - add bottom border */
+/* Navigation bar - add bottom border with cyan glow */
 .oui-scaffold-mainNav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  box-shadow: 0 1px 0 rgba(220, 180, 50, 0.1) !important;
+  box-shadow: 0 1px 0 rgba(0, 212, 170, 0.2) !important;
 }
 
 /* Add spacing to main container */
@@ -111,12 +111,12 @@ button.oui-bg-primary:hover {
   gap: 12px;
 }
 
-/* Table headers - gold accent */
+/* Table headers - cyan accent */
 .oui-table-thead-th {
-  border-bottom: 1px solid rgba(220, 180, 50, 0.2) !important;
+  border-bottom: 1px solid rgba(0, 212, 170, 0.25) !important;
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - cyan theme */
 .oui-custom-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -128,10 +128,10 @@ button.oui-bg-primary:hover {
 }
 
 .oui-custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(220, 180, 50, 0.3);
+  background: rgba(0, 212, 170, 0.4);
   border-radius: 4px;
 }
 
 .oui-custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(220, 180, 50, 0.5);
+  background: rgba(0, 212, 170, 0.6);
 }
