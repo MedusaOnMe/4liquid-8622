@@ -273,16 +273,52 @@ button.oui-bg-primary:hover {
   }
 }
 
-/* Logo */
-.landing-logo {
+/* Header with Logo and X Icon */
+.landing-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
   margin-bottom: 3rem;
   animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+.landing-logo {
+  display: flex;
+  align-items: center;
+}
+
 .landing-logo-img {
-  height: 80px;
-  filter: drop-shadow(0 0 20px rgba(0, 212, 170, 0.3));
+  height: 100px;
+  filter: drop-shadow(0 0 30px rgba(0, 212, 170, 0.4));
   animation: pulse 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.landing-logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* X Icon Link */
+.landing-x-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 212, 170, 0.1);
+  border: 2px solid rgba(0, 212, 170, 0.3);
+  border-radius: 12px;
+  color: rgb(0, 212, 170);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.landing-x-icon:hover {
+  background: rgba(0, 212, 170, 0.2);
+  border-color: rgb(0, 212, 170);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
 }
 
 @keyframes pulse {
@@ -411,32 +447,92 @@ button.oui-bg-primary:hover {
 }
 
 .landing-feature-icon {
-  font-size: 2rem;
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0, 212, 170, 0.1);
-  border: 1px solid rgba(0, 212, 170, 0.3);
-  border-radius: 12px;
+  border: 2px solid rgba(0, 212, 170, 0.3);
+  border-radius: 16px;
+  color: rgb(0, 212, 170);
   transition: all 0.3s ease;
 }
 
 .landing-feature:hover .landing-feature-icon {
   background: rgba(0, 212, 170, 0.2);
-  border-color: rgba(0, 212, 170, 0.5);
+  border-color: rgb(0, 212, 170);
   transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 212, 170, 0.3);
 }
 
 .landing-feature-text {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* CA Button */
+.landing-ca-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 212, 170, 0.08);
+  border: 2px solid rgba(0, 212, 170, 0.25);
+  border-radius: 12px;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.landing-ca-button:hover {
+  background: rgba(0, 212, 170, 0.15);
+  border-color: rgba(0, 212, 170, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 170, 0.2);
+}
+
+.landing-ca-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.landing-ca-address {
+  color: rgb(0, 212, 170);
   font-weight: 500;
+}
+
+.landing-ca-icon {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+
+.landing-ca-button:hover .landing-ca-icon {
+  color: rgb(0, 212, 170);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .landing-header {
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .landing-logo-img {
+    height: 70px;
+  }
+
+  .landing-x-icon {
+    width: 40px;
+    height: 40px;
+  }
+
   .landing-title {
     font-size: 2.5rem;
   }
@@ -455,8 +551,15 @@ button.oui-bg-primary:hover {
     gap: 2rem;
   }
 
-  .landing-logo-img {
-    height: 60px;
+  .landing-feature-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .landing-ca-button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.85rem;
+    margin-top: 2.5rem;
   }
 
   .landing-gradient-orb {

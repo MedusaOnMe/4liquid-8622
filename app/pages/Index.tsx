@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
+import { Zap, Shield, TrendingUp, Copy, Check } from "lucide-react";
 import { DEFAULT_SYMBOL } from "@/utils/storage";
 import { getPageMeta } from "@/utils/seo";
 import { getRuntimeConfig } from "@/utils/runtime-config";
@@ -10,9 +12,22 @@ export default function Index() {
   const pageMeta = getPageMeta();
   const appName = getRuntimeConfig("VITE_APP_NAME");
   const appDescription = getRuntimeConfig("VITE_APP_DESCRIPTION");
+  const [copied, setCopied] = useState(false);
 
   const handleEnterApp = () => {
     navigate(`/perp/${DEFAULT_SYMBOL}`);
+  };
+
+  const contractAddress = "0xdb698474f525cfd4eb9a9015788c7b91668a4444";
+
+  const handleCopyCA = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
   };
 
   return (
@@ -35,9 +50,21 @@ export default function Index() {
 
         {/* Content */}
         <div className="landing-content">
-          {/* Logo */}
-          <div className="landing-logo">
-            <img src="/logo.webp" alt="4Liquid" className="landing-logo-img" />
+          {/* Header with Logo and Social */}
+          <div className="landing-header">
+            <div className="landing-logo">
+              <img src="/logo.webp" alt="4Liquid" className="landing-logo-img" />
+            </div>
+            <a
+              href="https://x.com/4liquidbnb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="landing-x-icon"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
           </div>
 
           {/* Title */}
@@ -48,7 +75,7 @@ export default function Index() {
 
           {/* Subtitle */}
           <p className="landing-subtitle">
-            Experience lightning-fast perpetual trading with up to 20x leverage on BSC
+            Experience lightning-fast perpetual trading with up to 100x leverage on BSC
           </p>
 
           {/* CTA Button */}
@@ -62,18 +89,31 @@ export default function Index() {
           {/* Features */}
           <div className="landing-features">
             <div className="landing-feature">
-              <div className="landing-feature-icon">⚡</div>
+              <Zap className="landing-feature-icon" size={32} strokeWidth={2} />
               <div className="landing-feature-text">Instant Execution</div>
             </div>
             <div className="landing-feature">
-              <div className="landing-feature-icon">🔒</div>
+              <Shield className="landing-feature-icon" size={32} strokeWidth={2} />
               <div className="landing-feature-text">Secure Trading</div>
             </div>
             <div className="landing-feature">
-              <div className="landing-feature-icon">📈</div>
-              <div className="landing-feature-text">20x Leverage</div>
+              <TrendingUp className="landing-feature-icon" size={32} strokeWidth={2} />
+              <div className="landing-feature-text">100x Leverage</div>
             </div>
           </div>
+
+          {/* CA Button */}
+          <button onClick={handleCopyCA} className="landing-ca-button">
+            <span className="landing-ca-label">CA:</span>
+            <span className="landing-ca-address">
+              {contractAddress.slice(0, 6)}...{contractAddress.slice(-4)}
+            </span>
+            {copied ? (
+              <Check size={18} className="landing-ca-icon" />
+            ) : (
+              <Copy size={18} className="landing-ca-icon" />
+            )}
+          </button>
         </div>
       </div>
     </>
