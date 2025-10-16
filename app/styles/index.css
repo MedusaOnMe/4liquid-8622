@@ -11,8 +11,8 @@
   display: none;
 }
 
-/* hide "Powered by Orderly" footer section */
-.oui-scaffold-footer-powered-by {
+/* hide entire footer bar */
+.oui-scaffold-footer {
   display: none !important;
 }
 
