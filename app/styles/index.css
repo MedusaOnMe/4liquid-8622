@@ -164,57 +164,43 @@ button.oui-bg-primary:hover {
 
 /* ========== LAYOUT FIX: FIT ALL PANELS ON SCREEN ========== */
 
-/* Main scaffold container - constrain to viewport height */
+/* Remove the extreme height constraint that's cutting off content */
 .oui-scaffold-container {
-  max-height: 100vh !important;
-  overflow: hidden !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
-/* Trading page content area - account for header + horizontal markets bar */
-.oui-scaffold-container > .oui-box > .oui-box:last-child {
-  height: calc(100vh - 110px) !important;
-  max-height: calc(100vh - 110px) !important;
-  overflow: hidden !important;
+/* Make the main trading container fit viewport with proper spacing */
+.oui-horizontal-markets + div {
+  max-height: calc(100vh - 140px) !important;
+  overflow-y: auto !important;
 }
 
-/* Chart area - make it take 55% of available height */
-.oui-trading-page-layout > div:nth-child(1) {
-  height: 55% !important;
-  max-height: 55% !important;
-  min-height: 350px !important;
-  overflow: hidden !important;
-}
-
-/* Chart container itself */
+/* Reduce chart height to 50vh so positions panel is visible */
 .oui-chart-container {
-  height: 100% !important;
-  max-height: 100% !important;
-  overflow: hidden !important;
+  max-height: 50vh !important;
+  height: 50vh !important;
 }
 
-/* Positions/Orders/History section - take 45% of height, scrollable */
-.oui-trading-page-layout > div:nth-child(2) {
-  height: 45% !important;
-  max-height: 45% !important;
-  min-height: 200px !important;
+/* Make positions/orders section visible by limiting its max height */
+.oui-trading-page-layout > div:last-child {
+  max-height: 35vh !important;
+}
+
+/* Enable scrolling within positions/orders tabs */
+.oui-tabs-content > div {
+  max-height: 30vh !important;
   overflow-y: auto !important;
 }
 
-/* Tab content areas - enable scrolling */
-.oui-tab-content,
-.oui-tabs-content {
-  max-height: calc(45vh - 100px) !important;
-  overflow-y: auto !important;
-}
-
-/* Order book sidebar - constrain height */
+/* Constrain order book height */
 #oui-side-markets {
-  max-height: calc(100vh - 160px) !important;
+  max-height: 85vh !important;
   overflow-y: auto !important;
 }
 
-/* Order entry sidebar - constrain height */
+/* Constrain order entry height */
 .oui-trading-order-entry {
-  max-height: calc(100vh - 160px) !important;
+  max-height: 85vh !important;
   overflow-y: auto !important;
 }
