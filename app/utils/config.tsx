@@ -322,19 +322,12 @@ export const useOrderlyConfig = () => {
             "adaptive_logo",             // Hide "Charts by TradingView"
             "popup_hints",               // Hide popup hints
             "timeframes_toolbar",        // Hide bottom timeframe bar
-            "create_volume_indicator_by_default", // Don't create volume by default
+            "create_volume_indicator_by_default", // Disable volume indicator completely
           ],
           // Chart property overrides
           overrides: {
-            // Change status line title from "ticker" to "description"
-            "mainSeriesProperties.statusViewStyle.symbolTextSource": "description",
-          },
-          // Volume indicator styling (if manually added)
-          studies_overrides: {
-            "volume.volume.color.0": "rgba(0, 212, 170, 0.3)",  // Down volume - cyan with transparency
-            "volume.volume.color.1": "rgba(0, 212, 170, 0.5)",  // Up volume - brighter cyan
-            "volume.volume.transparency": 70,                    // Make more transparent
-            "volume.volume.linewidth": 1,                        // Thinner lines
+            // Hide the title in status line (Settings > Status Line > Title checkbox)
+            "paneProperties.legendProperties.showSeriesTitle": false,
           },
         },
         sharePnLConfig: {
