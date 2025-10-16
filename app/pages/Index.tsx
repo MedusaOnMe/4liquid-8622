@@ -18,7 +18,7 @@ export default function Index() {
     navigate(`/perp/${DEFAULT_SYMBOL}`);
   };
 
-  const contractAddress = "0x0000000000000000000000000000000000000000";
+  const contractAddress = "0xd8949726cc656be0fa254c018dc8b3b0099e4444";
 
   const handleCopyCA = async () => {
     try {
