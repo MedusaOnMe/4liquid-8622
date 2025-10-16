@@ -40,21 +40,21 @@ export type OrderlyConfig = {
 };
 
 const ALL_MENU_ITEMS = [
-  { name: "Trading", href: "/", translationKey: "common.trading" },
-  { name: "Portfolio", href: "/portfolio", translationKey: "common.portfolio" },
-  { name: "Markets", href: "/markets", translationKey: "common.markets" },
-  { name: "Swap", href: "/swap", translationKey: "extend.swap" },
+  { name: "Trade", href: "/", translationKey: "common.trading" },
+  { name: "Account", href: "/portfolio", translationKey: "common.portfolio" },
+  { name: "Discover", href: "/markets", translationKey: "common.markets" },
+  { name: "Exchange", href: "/swap", translationKey: "extend.swap" },
   { name: "Rewards", href: "/rewards", translationKey: "tradingRewards.rewards" },
-  { name: "Leaderboard", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
-  { name: "Vaults", href: "/vaults", translationKey: "common.vaults" },
+  { name: "Rankings", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
+  { name: "Earn", href: "/vaults", translationKey: "common.vaults" },
 ];
 
 const DEFAULT_ENABLED_MENUS = [
-  { name: "Trading", href: "/", translationKey: "common.trading" },
-  { name: "Portfolio", href: "/portfolio", translationKey: "common.portfolio" },
-  { name: "Markets", href: "/markets", translationKey: "common.markets" },
-  { name: "Swap", href: "/swap", translationKey: "extend.swap" },
-  { name: "Leaderboard", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
+  { name: "Trade", href: "/", translationKey: "common.trading" },
+  { name: "Account", href: "/portfolio", translationKey: "common.portfolio" },
+  { name: "Discover", href: "/markets", translationKey: "common.markets" },
+  { name: "Exchange", href: "/swap", translationKey: "extend.swap" },
+  { name: "Rankings", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
 ];
 
 const getCustomMenuItems = (): MainNavItem[] => {
@@ -328,6 +328,11 @@ export const useOrderlyConfig = () => {
           overrides: {
             // Hide the title in status line (Settings > Status Line > Title checkbox)
             "paneProperties.legendProperties.showSeriesTitle": false,
+          },
+          // Settings overrides - FORCE override localStorage
+          settings_overrides: {
+            // Force hide volume in legend (overrides user's localStorage)
+            "paneProperties.legendProperties.showVolume": false,
           },
         },
         sharePnLConfig: {
