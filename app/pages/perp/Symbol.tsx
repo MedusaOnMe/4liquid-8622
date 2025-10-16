@@ -17,16 +17,21 @@ export default function PerpSymbol() {
 
   // Set default layout preferences on first load
   useEffect(() => {
-    const layoutKey = 'orderly_trading_layout';
-    const existingLayout = localStorage.getItem(layoutKey);
+    // Set both layout keys based on localStorage inspection
+    const advancedLayoutKey = 'orderly_horizontal_markets_layout';
+    const marketsLayoutKey = 'orderly_order_entry_side_markets_layout';
 
-    if (!existingLayout) {
-      // Set default layout: Advanced=left, Markets=top
-      const defaultLayout = {
-        advanced: 'left',
-        markets: 'top'
-      };
-      localStorage.setItem(layoutKey, JSON.stringify(defaultLayout));
+    const existingAdvanced = localStorage.getItem(advancedLayoutKey);
+    const existingMarkets = localStorage.getItem(marketsLayoutKey);
+
+    if (!existingAdvanced) {
+      // Advanced panel: default to "left"
+      localStorage.setItem(advancedLayoutKey, '"left"');
+    }
+
+    if (!existingMarkets) {
+      // Markets panel: default to "top"
+      localStorage.setItem(marketsLayoutKey, '"top"');
     }
   }, []);
 

@@ -278,8 +278,8 @@ export const useOrderlyConfig = () => {
               </div>
             )}
             {components.accountSummary}
-            {components.linkDevice}
-            {components.scanQRCode}
+            {/* Removed: components.linkDevice - mobile link icon */}
+            {/* Removed: components.scanQRCode - 3 dots menu */}
             {components.languageSwitcher}
             {components.subAccount}
             {components.chainMenu}
