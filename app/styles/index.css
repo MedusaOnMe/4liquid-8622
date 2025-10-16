@@ -161,3 +161,62 @@ button.oui-bg-primary:hover {
     display: none;
   }
 }
+
+/* ========== LAYOUT FIX: FIT ALL PANELS ON SCREEN ========== */
+
+/* Main trading page container - use viewport height minus header */
+.oui-trading-page {
+  height: calc(100vh - 60px) !important;
+  max-height: calc(100vh - 60px) !important;
+  overflow: hidden !important;
+}
+
+/* Trading page layout - flex column with controlled height */
+.oui-trading-page-layout {
+  height: 100% !important;
+  max-height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+/* Chart and upper section - take 60% of available height */
+.oui-trading-page-layout > div:first-child {
+  flex: 0 0 60% !important;
+  max-height: 60% !important;
+  min-height: 400px !important;
+  overflow: hidden !important;
+}
+
+/* Chart container itself - fit within parent */
+.oui-chart-container {
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Positions/Orders section below chart - take remaining 40% */
+.oui-trading-page-layout > div:last-child {
+  flex: 1 1 40% !important;
+  max-height: 40% !important;
+  min-height: 250px !important;
+  overflow: auto !important;
+}
+
+/* Positions and orders tabs container - scrollable */
+.oui-tab-content {
+  max-height: 100% !important;
+  overflow-y: auto !important;
+}
+
+/* Order book and order entry panels - fit within their containers */
+#oui-side-markets,
+.oui-trading-order-entry {
+  max-height: calc(100vh - 120px) !important;
+  overflow-y: auto !important;
+}
+
+/* Ensure tables within positions/orders are scrollable */
+.oui-table-container {
+  max-height: 100% !important;
+  overflow-y: auto !important;
+}

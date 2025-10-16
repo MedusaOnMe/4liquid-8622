@@ -323,13 +323,16 @@ export const useOrderlyConfig = () => {
             "popup_hints",               // Hide popup hints
             "timeframes_toolbar",        // Hide bottom timeframe bar
             "create_volume_indicator_by_default", // Disable volume indicator completely
+            "save_chart_properties_to_local_storage", // Prevent saving volume settings to localStorage
           ],
           // Chart property overrides
           overrides: {
             // Hide the title in status line (Settings > Status Line > Title checkbox)
             "paneProperties.legendProperties.showSeriesTitle": false,
+            // Force hide volume in legend
+            "paneProperties.legendProperties.showVolume": false,
           },
-          // Settings overrides - FORCE override localStorage
+          // Settings overrides - FORCE override localStorage (overrides saved user preferences)
           settings_overrides: {
             // Force hide volume in legend (overrides user's localStorage)
             "paneProperties.legendProperties.showVolume": false,
