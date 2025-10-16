@@ -252,26 +252,6 @@ export const useOrderlyConfig = () => {
                 : components.title}
             </Link>
 
-            {/* Contract Address Display with Copy Button */}
-            {!isMobile && (
-              <button
-                onClick={() => {
-                  const ca = "Coming Soon"; // Replace with actual CA when live
-                  navigator.clipboard.writeText(ca).then(() => {
-                    // Optional: Show toast notification
-                    console.log('Copied to clipboard');
-                  });
-                }}
-                className="oui-ml-3 oui-flex oui-items-center oui-gap-1.5 oui-text-2xs oui-font-medium oui-text-primary oui-bg-base-8 hover:oui-bg-base-7 oui-px-2.5 oui-py-1.5 oui-rounded oui-border oui-border-primary/30 hover:oui-border-primary/50 oui-transition-all"
-                title="Click to copy contract address"
-              >
-                <span>CA: Coming Soon</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="oui-shrink-0">
-                  <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
-                </svg>
-              </button>
-            )}
-
             {components.mainNav}
             {!isMobile && getRuntimeConfig('VITE_TWITTER_URL') && (
               <a
@@ -285,6 +265,25 @@ export const useOrderlyConfig = () => {
                   <path d="m4.42 4.73 4.633 6.194-4.662 5.037H5.44l4.082-4.41 3.298 4.41h3.57l-4.893-6.543 4.34-4.689h-1.05l-3.759 4.062-3.037-4.062zm1.543.772h1.64l7.244 9.686h-1.64z"></path>
                 </svg>
               </a>
+            )}
+
+            {/* Contract Address Display with Copy Button - After X icon */}
+            {!isMobile && (
+              <button
+                onClick={() => {
+                  const ca = "0x0000000000000000000000000000000000000000";
+                  navigator.clipboard.writeText(ca).then(() => {
+                    console.log('Copied CA to clipboard');
+                  });
+                }}
+                className="oui-ml-2 oui-flex oui-items-center oui-gap-1.5 oui-text-2xs oui-font-medium oui-text-primary oui-bg-base-8 hover:oui-bg-base-7 oui-px-2.5 oui-py-1.5 oui-rounded oui-transition-all"
+                title="Click to copy contract address: 0x0000000000000000000000000000000000000000"
+              >
+                <span>CA: 0x0000...0000</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="oui-shrink-0">
+                  <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
+                </svg>
+              </button>
             )}
           </Flex>
 
