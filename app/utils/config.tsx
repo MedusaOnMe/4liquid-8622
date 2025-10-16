@@ -40,21 +40,21 @@ export type OrderlyConfig = {
 };
 
 const ALL_MENU_ITEMS = [
-  { name: "Trade", href: "/", translationKey: "common.trading" },
-  { name: "Account", href: "/portfolio", translationKey: "common.portfolio" },
-  { name: "Discover", href: "/markets", translationKey: "common.markets" },
-  { name: "Exchange", href: "/swap", translationKey: "extend.swap" },
+  { name: "Trading", href: "/", translationKey: "common.trading" },
+  { name: "Portfolio", href: "/portfolio", translationKey: "common.portfolio" },
+  { name: "Markets", href: "/markets", translationKey: "common.markets" },
+  { name: "Swap", href: "/swap", translationKey: "extend.swap" },
   { name: "Rewards", href: "/rewards", translationKey: "tradingRewards.rewards" },
-  { name: "Rankings", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
-  { name: "Earn", href: "/vaults", translationKey: "common.vaults" },
+  { name: "Leaderboard", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
+  { name: "Vaults", href: "/vaults", translationKey: "common.vaults" },
 ];
 
 const DEFAULT_ENABLED_MENUS = [
-  { name: "Trade", href: "/", translationKey: "common.trading" },
-  { name: "Account", href: "/portfolio", translationKey: "common.portfolio" },
-  { name: "Discover", href: "/markets", translationKey: "common.markets" },
-  { name: "Exchange", href: "/swap", translationKey: "extend.swap" },
-  { name: "Rankings", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
+  { name: "Trading", href: "/", translationKey: "common.trading" },
+  { name: "Portfolio", href: "/portfolio", translationKey: "common.portfolio" },
+  { name: "Markets", href: "/markets", translationKey: "common.markets" },
+  { name: "Swap", href: "/swap", translationKey: "extend.swap" },
+  { name: "Leaderboard", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
 ];
 
 const getCustomMenuItems = (): MainNavItem[] => {
@@ -260,7 +260,7 @@ export const useOrderlyConfig = () => {
                 className="oui-flex oui-items-center oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors"
                 aria-label="Follow us on X"
               >
-                <svg width="22" height="22" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="m4.42 4.73 4.633 6.194-4.662 5.037H5.44l4.082-4.41 3.298 4.41h3.57l-4.893-6.543 4.34-4.689h-1.05l-3.759 4.062-3.037-4.062zm1.543.772h1.64l7.244 9.686h-1.64z"></path>
                 </svg>
               </a>
