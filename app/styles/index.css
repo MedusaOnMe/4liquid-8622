@@ -10,3 +10,8 @@
 .oui-box.oui-flex.oui-flex-nowrap > div:nth-child(2).oui-box.oui-flex.oui-justify-start.oui-flex-nowrap.oui-relative {
   display: none;
 }
+
+/* hide "Powered by Orderly" footer section */
+.oui-scaffold-footer-powered-by {
+  display: none !important;
+}
