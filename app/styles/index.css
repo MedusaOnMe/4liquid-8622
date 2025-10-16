@@ -15,3 +15,8 @@
 .oui-scaffold-footer-powered-by {
   display: none !important;
 }
+
+/* hide announcement banner (listings/delistings) */
+.oui-scaffold-container > .oui-box.oui-px-2 > div.oui-relative.oui-z-\[1\] {
+  display: none !important;
+}

@@ -15,6 +15,21 @@ export default function PerpSymbol() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
+  // Set default layout preferences on first load
+  useEffect(() => {
+    const layoutKey = 'orderly_trading_layout';
+    const existingLayout = localStorage.getItem(layoutKey);
+
+    if (!existingLayout) {
+      // Set default layout: Advanced=left, Markets=top
+      const defaultLayout = {
+        advanced: 'left',
+        markets: 'top'
+      };
+      localStorage.setItem(layoutKey, JSON.stringify(defaultLayout));
+    }
+  }, []);
+
   useEffect(() => {
     updateSymbol(symbol);
   }, [symbol]);
