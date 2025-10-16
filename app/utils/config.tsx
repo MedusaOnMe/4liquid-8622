@@ -254,17 +254,38 @@ export const useOrderlyConfig = () => {
 
             {components.mainNav}
             {!isMobile && getRuntimeConfig('VITE_TWITTER_URL') && (
-              <a
-                href={getRuntimeConfig('VITE_TWITTER_URL')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="oui-flex oui-items-center oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors"
-                aria-label="Follow us on X"
-              >
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m4.42 4.73 4.633 6.194-4.662 5.037H5.44l4.082-4.41 3.298 4.41h3.57l-4.893-6.543 4.34-4.689h-1.05l-3.759 4.062-3.037-4.062zm1.543.772h1.64l7.244 9.686h-1.64z"></path>
-                </svg>
-              </a>
+              <>
+                <a
+                  href={getRuntimeConfig('VITE_TWITTER_URL')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="oui-flex oui-items-center oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors"
+                  aria-label="Follow us on X"
+                >
+                  <svg width="22" height="22" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m4.42 4.73 4.633 6.194-4.662 5.037H5.44l4.082-4.41 3.298 4.41h3.57l-4.893-6.543 4.34-4.689h-1.05l-3.759 4.062-3.037-4.062zm1.543.772h1.64l7.244 9.686h-1.64z"></path>
+                  </svg>
+                </a>
+                <button
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText('0x0000000000000000000000000000000000000000');
+                    } catch (err) {
+                      console.error('Failed to copy:', err);
+                    }
+                  }}
+                  className="oui-flex oui-items-center oui-gap-1.5 oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors oui-cursor-pointer oui-font-mono oui-text-xs"
+                  aria-label="Copy contract address"
+                  title="0x0000000000000000000000000000000000000000"
+                >
+                  <span className="oui-text-base-contrast-36">CA:</span>
+                  <span>0x0000...0000</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </>
             )}
           </Flex>
 
