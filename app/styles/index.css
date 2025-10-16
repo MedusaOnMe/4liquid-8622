@@ -23,21 +23,22 @@
 
 /* ========== CUSTOM 4LIQUID STYLING ========== */
 
-/* Add distinctive borders to all major panels - CYAN THEME */
+/* Add distinctive borders to all major panels - CYAN THEME - THICK BORDERS */
 .oui-box.oui-rounded-2xl.oui-bg-base-9 {
-  border: 1px solid rgba(0, 212, 170, 0.15) !important;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+  border: 2px solid rgba(0, 212, 170, 0.35) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 212, 170, 0.15) !important;
 }
 
-/* Markets panel - cyan left border accent */
+/* Markets panel - thick cyan left border accent */
 #oui-side-markets {
-  border-left: 2px solid rgba(0, 212, 170, 0.5) !important;
+  border: 2px solid rgba(0, 212, 170, 0.4) !important;
+  border-left: 4px solid rgba(0, 212, 170, 0.7) !important;
   border-radius: 12px !important;
 }
 
-/* Order entry forms - subtle border */
+/* Order entry forms - thicker border */
 .oui-trading-order-entry {
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border: 2px solid rgba(0, 212, 170, 0.25) !important;
   border-radius: 8px !important;
 }
 
@@ -51,23 +52,23 @@
   padding-top: 1rem !important;
 }
 
-/* Chart container - subtle border */
+/* Chart container - thicker border */
 .oui-chart-container,
 .tv-symbol-header {
-  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border: 2px solid rgba(0, 212, 170, 0.3) !important;
   border-radius: 12px !important;
 }
 
-/* Orderbook - add visual separation */
+/* Orderbook - thicker visual separation */
 .oui-orderbook-container {
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border: 2px solid rgba(0, 212, 170, 0.3) !important;
   border-radius: 8px !important;
 }
 
-/* Tabs - cyan accent on active */
+/* Tabs - thicker cyan accent on active */
 .oui-tab-trigger[data-state="active"] {
   background: rgba(0, 212, 170, 0.15) !important;
-  border-bottom: 2px solid rgb(0, 212, 170) !important;
+  border-bottom: 3px solid rgb(0, 212, 170) !important;
 }
 
 /* Cards and panels - increased spacing */
@@ -78,10 +79,10 @@
   padding: 12px !important;
 }
 
-/* Input fields - cyan focus border */
+/* Input fields - thicker cyan focus border */
 input:focus,
 .oui-input-root:focus-within {
-  outline: 2px solid rgba(0, 212, 170, 0.4) !important;
+  outline: 3px solid rgba(0, 212, 170, 0.5) !important;
   outline-offset: 0 !important;
 }
 
@@ -99,10 +100,10 @@ button.oui-bg-primary:hover {
   transition: all 0.2s ease;
 }
 
-/* Navigation bar - add bottom border with cyan glow */
+/* Navigation bar - thicker bottom border with cyan glow */
 .oui-scaffold-mainNav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  box-shadow: 0 1px 0 rgba(0, 212, 170, 0.2) !important;
+  border-bottom: 2px solid rgba(0, 212, 170, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(0, 212, 170, 0.2) !important;
 }
 
 /* Add spacing to main container */
@@ -111,9 +112,9 @@ button.oui-bg-primary:hover {
   gap: 12px;
 }
 
-/* Table headers - cyan accent */
+/* Table headers - thicker cyan accent */
 .oui-table-thead-th {
-  border-bottom: 1px solid rgba(0, 212, 170, 0.25) !important;
+  border-bottom: 2px solid rgba(0, 212, 170, 0.4) !important;
 }
 
 /* Scrollbar styling - cyan theme */
@@ -136,7 +137,7 @@ button.oui-bg-primary:hover {
   background: rgba(0, 212, 170, 0.6);
 }
 
-/* Connected Status Indicator - positioned below nav bar */
+/* Connected Status Indicator - positioned below nav bar with thick border */
 .oui-scaffold-mainNav::after {
   content: "● Connected";
   display: block;
@@ -149,8 +150,8 @@ button.oui-bg-primary:hover {
   background: rgba(12, 16, 22, 0.95);
   padding: 6px 12px;
   border-radius: 6px;
-  border: 1px solid rgba(0, 212, 170, 0.3);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 212, 170, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 212, 170, 0.3);
   z-index: 1000;
   letter-spacing: 0.02em;
 }
