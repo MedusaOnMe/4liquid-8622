@@ -9,6 +9,7 @@ import { PortfolioActiveIcon, PortfolioInactiveIcon, TradingActiveIcon, TradingI
 import { getRuntimeConfig, getRuntimeConfigBoolean, getRuntimeConfigNumber } from "./runtime-config";
 import { Link } from "react-router-dom";
 import CustomLeftNav from "@/components/CustomLeftNav";
+import { Twitter } from "lucide-react";
 
 interface MainNavItem {
   name: string;
@@ -252,6 +253,17 @@ export const useOrderlyConfig = () => {
                 : components.title}
             </Link>
             {components.mainNav}
+            {!isMobile && getRuntimeConfig('VITE_TWITTER_URL') && (
+              <a
+                href={getRuntimeConfig('VITE_TWITTER_URL')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="oui-flex oui-items-center oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors"
+                aria-label="Follow us on X (Twitter)"
+              >
+                <Twitter size={18} />
+              </a>
+            )}
           </Flex>
 
           <Flex itemAlign={"center"} className="oui-gap-2">
