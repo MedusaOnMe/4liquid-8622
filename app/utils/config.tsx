@@ -312,6 +312,30 @@ export const useOrderlyConfig = () => {
           library_path: withBasePath("/tradingview/charting_library/"),
           customCssUrl: withBasePath("/tradingview/chart.css"),
           colorConfig: getColorConfig(),
+          // Disable TradingView features for cleaner branded look
+          disabled_features: [
+            "header_saveload",           // Hide save/load buttons
+            "header_screenshot",         // Hide screenshot button
+            "header_compare",            // Hide compare button
+            "header_undo_redo",          // Hide undo/redo
+            "display_market_status",     // Hide market status
+            "adaptive_logo",             // Hide "Charts by TradingView"
+            "popup_hints",               // Hide popup hints
+            "timeframes_toolbar",        // Hide bottom timeframe bar
+            "create_volume_indicator_by_default", // Don't create volume by default
+          ],
+          // Chart property overrides
+          overrides: {
+            // Change status line title from "ticker" to "description"
+            "mainSeriesProperties.statusViewStyle.symbolTextSource": "description",
+          },
+          // Volume indicator styling (if manually added)
+          studies_overrides: {
+            "volume.volume.color.0": "rgba(0, 212, 170, 0.3)",  // Down volume - cyan with transparency
+            "volume.volume.color.1": "rgba(0, 212, 170, 0.5)",  // Up volume - brighter cyan
+            "volume.volume.transparency": 70,                    // Make more transparent
+            "volume.volume.linewidth": 1,                        // Thinner lines
+          },
         },
         sharePnLConfig: {
           backgroundImages: getPnLBackgroundImages(),
