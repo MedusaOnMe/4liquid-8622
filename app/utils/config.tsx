@@ -260,7 +260,7 @@ export const useOrderlyConfig = () => {
                 className="oui-flex oui-items-center oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors"
                 aria-label="Follow us on X"
               >
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="m4.42 4.73 4.633 6.194-4.662 5.037H5.44l4.082-4.41 3.298 4.41h3.57l-4.893-6.543 4.34-4.689h-1.05l-3.759 4.062-3.037-4.062zm1.543.772h1.64l7.244 9.686h-1.64z"></path>
                 </svg>
               </a>
