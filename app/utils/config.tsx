@@ -266,25 +266,6 @@ export const useOrderlyConfig = () => {
                 </svg>
               </a>
             )}
-
-            {/* Contract Address Display with Copy Button - After X icon */}
-            {!isMobile && (
-              <button
-                onClick={() => {
-                  const ca = "0x0000000000000000000000000000000000000000";
-                  navigator.clipboard.writeText(ca).then(() => {
-                    console.log('Copied CA to clipboard');
-                  });
-                }}
-                className="oui-ml-2 oui-flex oui-items-center oui-gap-1.5 oui-text-2xs oui-font-medium oui-text-primary oui-bg-base-8 hover:oui-bg-base-7 oui-px-2.5 oui-py-1.5 oui-rounded oui-transition-all"
-                title="Click to copy contract address: 0x0000000000000000000000000000000000000000"
-              >
-                <span>CA: 0x0000...0000</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="oui-shrink-0">
-                  <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
-                </svg>
-              </button>
-            )}
           </Flex>
 
           <Flex itemAlign={"center"} className="oui-gap-2">
