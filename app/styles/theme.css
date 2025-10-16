@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --oui-font-family: 'Manrope', sans-serif;
+  --oui-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --oui-font-size-base: 16px;
 
-  /* colors */
-  --oui-color-primary: 0 128 128;
-  --oui-color-primary-light: 32 160 160;
-  --oui-color-primary-darken: 0 96 96;
-  --oui-color-primary-contrast: 255 255 255;
+  /* colors - Custom 4Liquid branding */
+  --oui-color-primary: 220 180 50;
+  --oui-color-primary-light: 240 200 80;
+  --oui-color-primary-darken: 200 160 30;
+  --oui-color-primary-contrast: 0 0 0;
 
   --oui-color-link: 0 191 255;
   --oui-color-link-light: 96 223 255;
@@ -41,8 +43,8 @@
   --oui-color-base-6: 22 30 37;
   --oui-color-base-7: 80 88 101;
   --oui-color-base-8: 15 20 28;
-  --oui-color-base-9: 8 14 22;
-  --oui-color-base-10: 14 13 18;
+  --oui-color-base-9: 5 10 18;
+  --oui-color-base-10: 0 0 0;
 
   --oui-color-base-foreground: 255 255 255;
   --oui-color-line: 255 255 255;
@@ -95,6 +97,8 @@
 }
 
 html, body {
-  font-family: 'Manrope', sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
 }

@@ -20,3 +20,118 @@
 .oui-scaffold-container > .oui-box.oui-px-2 > div.oui-relative.oui-z-\[1\] {
   display: none !important;
 }
+
+/* ========== CUSTOM 4LIQUID STYLING ========== */
+
+/* Add distinctive borders to all major panels */
+.oui-box.oui-rounded-2xl.oui-bg-base-9 {
+  border: 1px solid rgba(220, 180, 50, 0.15) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Markets panel - gold left border accent */
+#oui-side-markets {
+  border-left: 2px solid rgba(220, 180, 50, 0.4) !important;
+  border-radius: 12px !important;
+}
+
+/* Order entry forms - subtle border */
+.oui-trading-order-entry {
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+}
+
+/* Increase spacing between major sections */
+.oui-trading-page-layout {
+  gap: 16px !important;
+}
+
+/* Add padding to panels */
+.oui-box.oui-pt-3 {
+  padding-top: 1rem !important;
+}
+
+/* Chart container - subtle border */
+.oui-chart-container,
+.tv-symbol-header {
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border-radius: 12px !important;
+}
+
+/* Orderbook - add visual separation */
+.oui-orderbook-container {
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+}
+
+/* Tabs - gold accent on active */
+.oui-tab-trigger[data-state="active"] {
+  background: rgba(220, 180, 50, 0.15) !important;
+  border-bottom: 2px solid rgb(220, 180, 50) !important;
+}
+
+/* Cards and panels - increased spacing */
+.oui-box.oui-bg-base-9,
+.oui-box.oui-bg-base-8,
+.oui-box.oui-bg-base-7 {
+  margin: 4px !important;
+  padding: 12px !important;
+}
+
+/* Input fields - gold focus border */
+input:focus,
+.oui-input-root:focus-within {
+  outline: 2px solid rgba(220, 180, 50, 0.3) !important;
+  outline-offset: 0 !important;
+}
+
+/* Buttons - enhanced styling */
+button.oui-bg-primary {
+  background: linear-gradient(135deg, rgb(220, 180, 50), rgb(240, 200, 80)) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 2px 8px rgba(220, 180, 50, 0.2) !important;
+}
+
+button.oui-bg-primary:hover {
+  box-shadow: 0 4px 12px rgba(220, 180, 50, 0.3) !important;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Navigation bar - add bottom border */
+.oui-scaffold-mainNav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 1px 0 rgba(220, 180, 50, 0.1) !important;
+}
+
+/* Add spacing to main container */
+.oui-scaffold-container {
+  padding: 12px !important;
+  gap: 12px;
+}
+
+/* Table headers - gold accent */
+.oui-table-thead-th {
+  border-bottom: 1px solid rgba(220, 180, 50, 0.2) !important;
+}
+
+/* Scrollbar styling */
+.oui-custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.oui-custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.oui-custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(220, 180, 50, 0.3);
+  border-radius: 4px;
+}
+
+.oui-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 180, 50, 0.5);
+}
