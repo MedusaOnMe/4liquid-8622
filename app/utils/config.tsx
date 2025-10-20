@@ -269,17 +269,17 @@ export const useOrderlyConfig = () => {
                 <button
                   onClick={async () => {
                     try {
-                      await navigator.clipboard.writeText('0xd8949726cc656be0fa254c018dc8b3b0099e4444');
+                      await navigator.clipboard.writeText('PercolatorSolanaContractAddress');
                     } catch (err) {
                       console.error('Failed to copy:', err);
                     }
                   }}
                   className="oui-flex oui-items-center oui-gap-1.5 oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors oui-cursor-pointer oui-font-mono oui-text-xs"
                   aria-label="Copy contract address"
-                  title="0xd8949726cc656be0fa254c018dc8b3b0099e4444"
+                  title="PercolatorSolanaContractAddress"
                 >
                   <span className="oui-text-base-contrast-36">CA:</span>
-                  <span>0xd894...4444</span>
+                  <span>Percol...ress</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>

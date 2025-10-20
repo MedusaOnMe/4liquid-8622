@@ -1,6 +1,6 @@
 {
-  "name": "dex-creator-template",
-  "description": "Template for Orderly SDK",
+  "name": "percolator-dex",
+  "description": "Percolator - Lightning-fast perpetual trading on Solana",
   "private": true,
   "sideEffects": false,
   "type": "module",

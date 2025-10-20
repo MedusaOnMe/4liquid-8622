@@ -21,24 +21,24 @@
   display: none !important;
 }
 
-/* ========== CUSTOM 4LIQUID STYLING ========== */
+/* ========== CUSTOM PERCOLATOR STYLING ========== */
 
-/* Add distinctive borders to all major panels - CYAN THEME - THICK BORDERS */
+/* Add distinctive borders to all major panels - SOLANA PURPLE THEME - THICK BORDERS */
 .oui-box.oui-rounded-2xl.oui-bg-base-9 {
-  border: 2px solid rgba(0, 212, 170, 0.35) !important;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 212, 170, 0.15) !important;
+  border: 2px solid rgba(159, 55, 253, 0.35) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(159, 55, 253, 0.15) !important;
 }
 
-/* Markets panel - thick cyan left border accent */
+/* Markets panel - thick purple left border accent */
 #oui-side-markets {
-  border: 2px solid rgba(0, 212, 170, 0.4) !important;
-  border-left: 4px solid rgba(0, 212, 170, 0.7) !important;
+  border: 2px solid rgba(159, 55, 253, 0.4) !important;
+  border-left: 4px solid rgba(159, 55, 253, 0.7) !important;
   border-radius: 12px !important;
 }
 
 /* Order entry forms - thicker border */
 .oui-trading-order-entry {
-  border: 2px solid rgba(0, 212, 170, 0.25) !important;
+  border: 2px solid rgba(159, 55, 253, 0.25) !important;
   border-radius: 8px !important;
 }
 
@@ -55,20 +55,20 @@
 /* Chart container - thicker border */
 .oui-chart-container,
 .tv-symbol-header {
-  border: 2px solid rgba(0, 212, 170, 0.3) !important;
+  border: 2px solid rgba(159, 55, 253, 0.3) !important;
   border-radius: 12px !important;
 }
 
 /* Orderbook - thicker visual separation */
 .oui-orderbook-container {
-  border: 2px solid rgba(0, 212, 170, 0.3) !important;
+  border: 2px solid rgba(159, 55, 253, 0.3) !important;
   border-radius: 8px !important;
 }
 
-/* Tabs - thicker cyan accent on active */
+/* Tabs - thicker purple accent on active */
 .oui-tab-trigger[data-state="active"] {
-  background: rgba(0, 212, 170, 0.15) !important;
-  border-bottom: 3px solid rgb(0, 212, 170) !important;
+  background: rgba(159, 55, 253, 0.15) !important;
+  border-bottom: 3px solid rgb(159, 55, 253) !important;
 }
 
 /* Cards and panels - increased spacing */
@@ -79,31 +79,31 @@
   padding: 12px !important;
 }
 
-/* Input fields - thicker cyan focus border */
+/* Input fields - thicker purple focus border */
 input:focus,
 .oui-input-root:focus-within {
-  outline: 3px solid rgba(0, 212, 170, 0.5) !important;
+  outline: 3px solid rgba(159, 55, 253, 0.5) !important;
   outline-offset: 0 !important;
 }
 
-/* Buttons - enhanced styling with cyan gradient */
+/* Buttons - enhanced styling with purple gradient */
 button.oui-bg-primary {
-  background: linear-gradient(135deg, rgb(0, 212, 170), rgb(41, 233, 200)) !important;
+  background: linear-gradient(135deg, rgb(159, 55, 253), rgb(180, 109, 255)) !important;
   font-weight: 600 !important;
   letter-spacing: 0.02em !important;
-  box-shadow: 0 2px 12px rgba(0, 212, 170, 0.3) !important;
+  box-shadow: 0 2px 12px rgba(159, 55, 253, 0.3) !important;
 }
 
 button.oui-bg-primary:hover {
-  box-shadow: 0 4px 16px rgba(0, 212, 170, 0.4) !important;
+  box-shadow: 0 4px 16px rgba(159, 55, 253, 0.4) !important;
   transform: translateY(-1px);
   transition: all 0.2s ease;
 }
 
-/* Navigation bar - thicker bottom border with cyan glow */
+/* Navigation bar - thicker bottom border with purple glow */
 .oui-scaffold-mainNav {
-  border-bottom: 2px solid rgba(0, 212, 170, 0.3) !important;
-  box-shadow: 0 2px 8px rgba(0, 212, 170, 0.2) !important;
+  border-bottom: 2px solid rgba(159, 55, 253, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(159, 55, 253, 0.2) !important;
 }
 
 /* Add spacing to main container */
@@ -112,12 +112,12 @@ button.oui-bg-primary:hover {
   gap: 12px;
 }
 
-/* Table headers - thicker cyan accent */
+/* Table headers - thicker purple accent */
 .oui-table-thead-th {
-  border-bottom: 2px solid rgba(0, 212, 170, 0.4) !important;
+  border-bottom: 2px solid rgba(159, 55, 253, 0.4) !important;
 }
 
-/* Scrollbar styling - cyan theme */
+/* Scrollbar styling - purple theme */
 .oui-custom-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -129,12 +129,12 @@ button.oui-bg-primary:hover {
 }
 
 .oui-custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(0, 212, 170, 0.4);
+  background: rgba(159, 55, 253, 0.4);
   border-radius: 4px;
 }
 
 .oui-custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 212, 170, 0.6);
+  background: rgba(159, 55, 253, 0.6);
 }
 
 /* Connected Status Indicator - positioned below nav bar with thick border */
@@ -146,12 +146,12 @@ button.oui-bg-primary:hover {
   right: 20px;
   font-size: 11px;
   font-weight: 500;
-  color: rgb(0, 212, 170);
+  color: rgb(159, 55, 253);
   background: rgba(12, 16, 22, 0.95);
   padding: 6px 12px;
   border-radius: 6px;
-  border: 2px solid rgba(0, 212, 170, 0.5);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 212, 170, 0.3);
+  border: 2px solid rgba(159, 55, 253, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(159, 55, 253, 0.3);
   z-index: 1000;
   letter-spacing: 0.02em;
 }
@@ -173,7 +173,7 @@ button[aria-label="Copy contract address"] {
 }
 
 button[aria-label="Copy contract address"]:focus-visible {
-  outline: 2px solid rgba(0, 212, 170, 0.5);
+  outline: 2px solid rgba(159, 55, 253, 0.5);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -211,7 +211,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 .landing-orb-1 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 212, 170, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(159, 55, 253, 0.4) 0%, transparent 70%);
   top: -10%;
   left: -5%;
   animation-delay: 0s;
@@ -220,7 +220,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 .landing-orb-2 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(41, 233, 200, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(180, 109, 255, 0.3) 0%, transparent 70%);
   bottom: -15%;
   right: -10%;
   animation-delay: 7s;
@@ -229,7 +229,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 .landing-orb-3 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 180, 145, 0.35) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(122, 34, 195, 0.35) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -253,8 +253,8 @@ button[aria-label="Copy contract address"]:focus-visible {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 212, 170, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 170, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(159, 55, 253, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 55, 253, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: gridMove 20s linear infinite;
 }
@@ -301,9 +301,9 @@ button[aria-label="Copy contract address"]:focus-visible {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(0, 212, 170, 0.6);
+  background: rgba(159, 55, 253, 0.6);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 212, 170, 0.8), 0 0 20px rgba(0, 212, 170, 0.4);
+  box-shadow: 0 0 10px rgba(159, 55, 253, 0.8), 0 0 20px rgba(159, 55, 253, 0.4);
   animation: particleFloat 10s infinite ease-in-out;
 }
 
@@ -356,7 +356,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 
 .landing-logo-img {
   height: 120px;
-  filter: drop-shadow(0 0 40px rgba(0, 212, 170, 0.5));
+  filter: drop-shadow(0 0 40px rgba(159, 55, 253, 0.5));
   animation: logoFloat 4s ease-in-out infinite, pulse 3s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
@@ -390,28 +390,28 @@ button[aria-label="Copy contract address"]:focus-visible {
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: rgba(0, 212, 170, 0.1);
-  border: 2px solid rgba(0, 212, 170, 0.3);
+  background: rgba(159, 55, 253, 0.1);
+  border: 2px solid rgba(159, 55, 253, 0.3);
   border-radius: 14px;
-  color: rgb(0, 212, 170);
+  color: rgb(159, 55, 253);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
   animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .landing-x-icon:hover {
-  background: rgba(0, 212, 170, 0.25);
-  border-color: rgb(0, 212, 170);
+  background: rgba(159, 55, 253, 0.25);
+  border-color: rgb(159, 55, 253);
   transform: translateY(-3px) rotate(5deg) scale(1.05);
-  box-shadow: 0 8px 30px rgba(0, 212, 170, 0.5);
+  box-shadow: 0 8px 30px rgba(159, 55, 253, 0.5);
 }
 
 @keyframes pulse {
   0%, 100% {
-    filter: drop-shadow(0 0 20px rgba(0, 212, 170, 0.3));
+    filter: drop-shadow(0 0 20px rgba(159, 55, 253, 0.3));
   }
   50% {
-    filter: drop-shadow(0 0 30px rgba(0, 212, 170, 0.6));
+    filter: drop-shadow(0 0 30px rgba(159, 55, 253, 0.6));
   }
 }
 
@@ -452,7 +452,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 }
 
 .landing-title-highlight {
-  background: linear-gradient(135deg, rgb(0, 212, 170), rgb(41, 233, 200), rgb(0, 180, 145), rgb(0, 212, 170));
+  background: linear-gradient(135deg, rgb(159, 55, 253), rgb(180, 109, 255), rgb(122, 34, 195), rgb(159, 55, 253));
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -475,10 +475,10 @@ button[aria-label="Copy contract address"]:focus-visible {
 
 @keyframes textGlow {
   0%, 100% {
-    filter: drop-shadow(0 0 10px rgba(0, 212, 170, 0.5));
+    filter: drop-shadow(0 0 10px rgba(159, 55, 253, 0.5));
   }
   50% {
-    filter: drop-shadow(0 0 20px rgba(0, 212, 170, 0.8));
+    filter: drop-shadow(0 0 20px rgba(159, 55, 253, 0.8));
   }
 }
 
@@ -497,7 +497,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 .landing-leverage-highlight {
   font-weight: 800;
   font-size: 1.5rem;
-  background: linear-gradient(135deg, rgb(0, 212, 170), rgb(41, 233, 200));
+  background: linear-gradient(135deg, rgb(159, 55, 253), rgb(180, 109, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -522,13 +522,13 @@ button[aria-label="Copy contract address"]:focus-visible {
   padding: 1.375rem 3.25rem;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #0a0e14;
-  background: linear-gradient(135deg, rgb(0, 212, 170), rgb(41, 233, 200));
+  color: #ffffff;
+  background: linear-gradient(135deg, rgb(159, 55, 253), rgb(180, 109, 255));
   border: none;
   border-radius: 16px;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 12px 45px rgba(0, 212, 170, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, inset 0 -2px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 45px rgba(159, 55, 253, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, inset 0 -2px 10px rgba(0, 0, 0, 0.15);
   animation: fadeInUp 1s ease-out 0.8s both, ctaPulse 3s ease-in-out 2s infinite;
   position: relative;
   overflow: hidden;
@@ -536,10 +536,10 @@ button[aria-label="Copy contract address"]:focus-visible {
 
 @keyframes ctaPulse {
   0%, 100% {
-    box-shadow: 0 12px 45px rgba(0, 212, 170, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, inset 0 -2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 45px rgba(159, 55, 253, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, inset 0 -2px 10px rgba(0, 0, 0, 0.15);
   }
   50% {
-    box-shadow: 0 12px 55px rgba(0, 212, 170, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, inset 0 -2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 55px rgba(159, 55, 253, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, inset 0 -2px 10px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -584,7 +584,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 
 .landing-cta:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 20px 50px rgba(0, 212, 170, 0.6), inset 0 -2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 50px rgba(159, 55, 253, 0.6), inset 0 -2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .landing-cta:active {
@@ -650,8 +650,8 @@ button[aria-label="Copy contract address"]:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 212, 170, 0.08);
-  border: 2px solid rgba(0, 212, 170, 0.3);
+  background: rgba(159, 55, 253, 0.08);
+  border: 2px solid rgba(159, 55, 253, 0.3);
   border-radius: 18px;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
@@ -662,7 +662,7 @@ button[aria-label="Copy contract address"]:focus-visible {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 212, 170, 0.2), transparent);
+  background: linear-gradient(135deg, rgba(159, 55, 253, 0.2), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -672,22 +672,22 @@ button[aria-label="Copy contract address"]:focus-visible {
 }
 
 .landing-feature-icon {
-  color: rgb(0, 212, 170);
+  color: rgb(159, 55, 253);
   transition: all 0.3s ease;
   z-index: 1;
   position: relative;
 }
 
 .landing-feature:hover .landing-feature-icon-wrapper {
-  background: rgba(0, 212, 170, 0.15);
-  border-color: rgb(0, 212, 170);
+  background: rgba(159, 55, 253, 0.15);
+  border-color: rgb(159, 55, 253);
   transform: translateY(-8px) rotate(5deg);
-  box-shadow: 0 12px 32px rgba(0, 212, 170, 0.4);
+  box-shadow: 0 12px 32px rgba(159, 55, 253, 0.4);
 }
 
 .landing-feature:hover .landing-feature-icon {
   transform: scale(1.15);
-  filter: drop-shadow(0 0 8px rgba(0, 212, 170, 0.8));
+  filter: drop-shadow(0 0 8px rgba(159, 55, 253, 0.8));
 }
 
 .landing-feature-text {
@@ -699,7 +699,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 }
 
 .landing-feature:hover .landing-feature-text {
-  color: rgb(0, 212, 170);
+  color: rgb(159, 55, 253);
   transform: scale(1.05);
 }
 
@@ -710,8 +710,8 @@ button[aria-label="Copy contract address"]:focus-visible {
   gap: 0.75rem;
   margin-top: 3rem;
   padding: 1rem 1.75rem;
-  background: rgba(0, 212, 170, 0.08);
-  border: 2px solid rgba(0, 212, 170, 0.3);
+  background: rgba(159, 55, 253, 0.08);
+  border: 2px solid rgba(159, 55, 253, 0.3);
   border-radius: 14px;
   color: white;
   font-family: 'Courier New', 'Monaco', monospace;
@@ -725,10 +725,10 @@ button[aria-label="Copy contract address"]:focus-visible {
 
 @keyframes caBlink {
   0%, 90%, 100% {
-    border-color: rgba(0, 212, 170, 0.3);
+    border-color: rgba(159, 55, 253, 0.3);
   }
   95% {
-    border-color: rgb(0, 212, 170);
+    border-color: rgb(159, 55, 253);
   }
 }
 
@@ -736,7 +736,7 @@ button[aria-label="Copy contract address"]:focus-visible {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(0, 212, 170, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(159, 55, 253, 0.1), transparent);
   transform: translateX(-100%);
   animation: caShimmer 3s ease-in-out infinite;
 }
@@ -751,10 +751,10 @@ button[aria-label="Copy contract address"]:focus-visible {
 }
 
 .landing-ca-button:hover {
-  background: rgba(0, 212, 170, 0.15);
-  border-color: rgb(0, 212, 170);
+  background: rgba(159, 55, 253, 0.15);
+  border-color: rgb(159, 55, 253);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 212, 170, 0.4);
+  box-shadow: 0 8px 30px rgba(159, 55, 253, 0.4);
 }
 
 .landing-ca-label {
@@ -765,7 +765,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 }
 
 .landing-ca-address {
-  color: rgb(0, 212, 170);
+  color: rgb(159, 55, 253);
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
@@ -775,7 +775,7 @@ button[aria-label="Copy contract address"]:focus-visible {
 
 .landing-ca-button:hover .landing-ca-address {
   letter-spacing: 0.04em;
-  text-shadow: 0 0 10px rgba(0, 212, 170, 0.5);
+  text-shadow: 0 0 10px rgba(159, 55, 253, 0.5);
 }
 
 .landing-ca-icon {
@@ -786,12 +786,12 @@ button[aria-label="Copy contract address"]:focus-visible {
 }
 
 .landing-ca-button:hover .landing-ca-icon {
-  color: rgb(0, 212, 170);
+  color: rgb(159, 55, 253);
   transform: scale(1.2);
 }
 
 .landing-ca-icon-copied {
-  color: rgb(0, 212, 170);
+  color: rgb(159, 55, 253);
   animation: iconBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 

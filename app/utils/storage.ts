@@ -1,5 +1,5 @@
-// Default trading pair for 4Liquid DEX
-export const DEFAULT_SYMBOL = "PERP_BNB_USDC";
+// Default trading pair for Percolator DEX
+export const DEFAULT_SYMBOL = "PERP_SOL_USDC";
 export const ORDERLY_SYMBOL_KEY = "orderly-current-symbol";
 
 export function getSymbol() {

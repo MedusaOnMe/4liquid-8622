@@ -18,7 +18,7 @@ export default function Index() {
     navigate(`/perp/${DEFAULT_SYMBOL}`);
   };
 
-  const contractAddress = "0xd8949726cc656be0fa254c018dc8b3b0099e4444";
+  const contractAddress = "PercolatorSolanaContractAddress";
 
   const handleCopyCA = async () => {
     try {
@@ -69,7 +69,7 @@ export default function Index() {
           {/* Logo */}
           <div className="landing-header">
             <div className="landing-logo">
-              <img src="/logo.webp" alt="4Liquid" className="landing-logo-img" />
+              <img src="/logo.webp" alt="Percolator" className="landing-logo-img" />
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export default function Index() {
 
           {/* Subtitle with Typing Effect */}
           <p className="landing-subtitle">
-            Experience lightning-fast perpetual trading with up to <span className="landing-leverage-highlight">100x</span> leverage on BSC
+            Experience lightning-fast perpetual trading with up to <span className="landing-leverage-highlight">100x</span> leverage on Solana
           </p>
 
           {/* CTA Button and X Icon - Side by Side */}
@@ -106,7 +106,7 @@ export default function Index() {
               </svg>
             </button>
             <a
-              href="https://x.com/4liquidbnb"
+              href="https://x.com/percolatorfi"
               target="_blank"
               rel="noopener noreferrer"
               className="landing-x-icon"
