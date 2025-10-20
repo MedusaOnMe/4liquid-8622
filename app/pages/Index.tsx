@@ -6,6 +6,7 @@ import { getPageMeta } from "@/utils/seo";
 import { getRuntimeConfig } from "@/utils/runtime-config";
 import { renderSEOTags } from "@/utils/seo-tags";
 
+// Percoliquid Landing Page - Liquid DeFi Trading on Solana
 export default function Index() {
   const navigate = useNavigate();
   const pageMeta = getPageMeta();
