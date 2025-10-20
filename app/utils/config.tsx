@@ -47,6 +47,7 @@ const ALL_MENU_ITEMS = [
   { name: "Rewards", href: "/rewards", translationKey: "tradingRewards.rewards" },
   { name: "Leaderboard", href: "/leaderboard", translationKey: "tradingLeaderboard.leaderboard" },
   { name: "Vaults", href: "/vaults", translationKey: "common.vaults" },
+  { name: "Spot", href: "/spot", translationKey: "extend.spot" },
 ];
 
 const DEFAULT_ENABLED_MENUS = [

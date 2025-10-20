@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
-import { Zap, Shield, TrendingUp, Copy, Check } from "lucide-react";
+import { Zap, Shield, TrendingUp, Copy, Check, Repeat } from "lucide-react";
 import { DEFAULT_SYMBOL } from "@/utils/storage";
 import { getPageMeta } from "@/utils/seo";
 import { getRuntimeConfig } from "@/utils/runtime-config";
@@ -16,6 +16,10 @@ export default function Index() {
 
   const handleEnterApp = () => {
     navigate(`/perp/${DEFAULT_SYMBOL}`);
+  };
+
+  const handleSpotTrading = () => {
+    navigate('/spot');
   };
 
   const contractAddress = "4U23WV4PPejzsZfo2VHqvT8pNhrGkx9SBkzooTFFpump";
@@ -96,14 +100,19 @@ export default function Index() {
             Experience lightning-fast perpetual trading with up to <span className="landing-leverage-highlight">100x</span> leverage on Solana
           </p>
 
-          {/* CTA Button and X Icon - Side by Side */}
+          {/* CTA Buttons and X Icon */}
           <div className="landing-cta-wrapper">
             <button onClick={handleEnterApp} className="landing-cta">
               <span className="landing-cta-glow"></span>
-              <span className="landing-cta-text">Enter App</span>
+              <span className="landing-cta-text">Perp Trading</span>
               <svg className="landing-cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
+            </button>
+            <button onClick={handleSpotTrading} className="landing-cta landing-cta-secondary">
+              <span className="landing-cta-glow"></span>
+              <span className="landing-cta-text">Spot Trading</span>
+              <Repeat className="landing-cta-arrow" size={20} strokeWidth={2} />
             </button>
             <a
               href="https://x.com/PercolatorDex"

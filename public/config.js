@@ -17,7 +17,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_APP_DESCRIPTION": "Percolator - Trade the Future of DeFi on Solana",
   "VITE_HAS_PRIMARY_LOGO": "true",
   "VITE_HAS_SECONDARY_LOGO": "true",
-  "VITE_ENABLED_MENUS": "Trading,Markets,Portfolio,Swap,Leaderboard,Vaults,Rewards",
+  "VITE_ENABLED_MENUS": "Trading,Markets,Portfolio,Swap,Leaderboard,Vaults,Rewards,Spot",
   "VITE_CUSTOM_MENUS": "",
   "VITE_ENABLE_CAMPAIGNS": "false",
   "VITE_TELEGRAM_URL": "",

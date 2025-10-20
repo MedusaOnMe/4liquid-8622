@@ -1,101 +1,71 @@
 import { generatePageTitle } from "@/utils/utils";
 import { getPageMeta } from "@/utils/seo";
 import { renderSEOTags } from "@/utils/seo-tags";
-import { useEffect, useRef, useState } from "react";
-import { useWallet } from "@solana/wallet-adapter-react";
-
-// Declare Jupiter global type
-declare global {
-  interface Window {
-    Jupiter?: {
-      init: (config: {
-        displayMode: "integrated" | "modal" | "widget";
-        integratedTargetId: string;
-        endpoint?: string;
-        passThroughWallet?: boolean;
-        formProps?: {
-          initialAmount?: string;
-          initialInputMint?: string;
-          initialOutputMint?: string;
-        };
-        strictTokenList?: boolean;
-        defaultExplorer?: string;
-      }) => void;
-      syncProps?: (props: { passthroughWalletContextState: any }) => void;
-      close?: () => void;
-      resume?: () => void;
-    };
-  }
-}
+import { useEffect, useRef } from "react";
+import { init } from '@jup-ag/plugin';
+import '@jup-ag/plugin/css';
 
 export default function SpotIndex() {
   const pageMeta = getPageMeta();
   const pageTitle = generatePageTitle("Spot");
-  const wallet = useWallet();
-  const [isTerminalReady, setIsTerminalReady] = useState(false);
   const terminalInitialized = useRef(false);
 
-  // Initialize Jupiter Terminal
+  // Initialize Jupiter Plugin
   useEffect(() => {
-    // Wait for Jupiter script to load
-    const checkJupiter = setInterval(() => {
-      if (window.Jupiter && !terminalInitialized.current) {
-        clearInterval(checkJupiter);
+    if (terminalInitialized.current) return;
 
-        try {
-          window.Jupiter.init({
-            displayMode: "integrated",
-            integratedTargetId: "jupiter-terminal-container",
-            endpoint: "https://api.mainnet-beta.solana.com",
-            passThroughWallet: true,
-            formProps: {
-              initialAmount: "1",
-              initialInputMint: "So11111111111111111111111111111111111111112", // SOL
-              initialOutputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", // USDC
-            },
-            strictTokenList: false,
-            defaultExplorer: "Solscan",
-          });
+    terminalInitialized.current = true;
 
-          terminalInitialized.current = true;
-          setIsTerminalReady(true);
-        } catch (error) {
-          console.error("Failed to initialize Jupiter Terminal:", error);
-        }
-      }
-    }, 100);
-
-    // Cleanup
-    return () => {
-      clearInterval(checkJupiter);
-    };
+    init({
+      displayMode: "integrated",
+      integratedTargetId: "jupiter-terminal-container",
+      endpoint: "https://mainnet.helius-rpc.com/?api-key=3e8f5e8e-4b3a-4f3a-9e8e-3e8f5e8e4b3a",
+      formProps: {
+        initialAmount: "1",
+        initialInputMint: "So11111111111111111111111111111111111111112", // SOL
+        initialOutputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", // USDC
+      },
+      strictTokenList: false,
+      defaultExplorer: "Solscan",
+    });
   }, []);
-
-  // Sync wallet state with Jupiter Terminal
-  useEffect(() => {
-    if (isTerminalReady && window.Jupiter?.syncProps) {
-      window.Jupiter.syncProps({
-        passthroughWalletContextState: wallet,
-      });
-    }
-  }, [wallet, wallet.connected, wallet.publicKey, isTerminalReady]);
 
   return (
     <>
       {renderSEOTags(pageMeta, pageTitle)}
-      <div className="w-full h-full flex flex-col items-center justify-center p-4 pt-8">
-        {/* Jupiter Terminal Container */}
-        <div
-          id="jupiter-terminal-container"
-          className="w-full max-w-[500px]"
-          style={{ minHeight: "600px" }}
-        />
+      <div className="spot-page-container">
+        {/* Animated Background */}
+        <div className="spot-bg">
+          <div className="spot-gradient-orb spot-orb-1"></div>
+          <div className="spot-gradient-orb spot-orb-2"></div>
+          <div className="spot-gradient-orb spot-orb-3"></div>
+          <div className="spot-grid"></div>
 
-        {!isTerminalReady && (
-          <div className="flex items-center justify-center" style={{ minHeight: "600px" }}>
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary" />
+          {/* Particle Effects */}
+          <div className="spot-particles">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div
+                key={i}
+                className="spot-particle"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 8}s`,
+                  animationDuration: `${8 + Math.random() * 12}s`,
+                }}
+              />
+            ))}
           </div>
-        )}
+        </div>
+
+        {/* Content */}
+        <div className="spot-content">
+          {/* Jupiter Terminal Container */}
+          <div
+            id="jupiter-terminal-container"
+            className="spot-terminal-wrapper"
+          />
+        </div>
       </div>
     </>
   );
