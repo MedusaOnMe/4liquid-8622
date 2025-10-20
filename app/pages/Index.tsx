@@ -18,7 +18,7 @@ export default function Index() {
     navigate(`/perp/${DEFAULT_SYMBOL}`);
   };
 
-  const contractAddress = "PercolatorSolanaContractAddress";
+  const contractAddress = "Coming Soon";
 
   const handleCopyCA = async () => {
     try {
