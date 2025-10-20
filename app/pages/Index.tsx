@@ -106,7 +106,7 @@ export default function Index() {
               </svg>
             </button>
             <a
-              href="https://x.com/percolatorfi"
+              href="https://x.com/PercolatorDex"
               target="_blank"
               rel="noopener noreferrer"
               className="landing-x-icon"

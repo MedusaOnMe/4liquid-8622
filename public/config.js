@@ -22,7 +22,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_ENABLE_CAMPAIGNS": "false",
   "VITE_TELEGRAM_URL": "",
   "VITE_DISCORD_URL": "",
-  "VITE_TWITTER_URL": "https://x.com/percolatorfi",
+  "VITE_TWITTER_URL": "https://x.com/PercolatorDex",
   "VITE_SEO_SITE_NAME": "Percolator",
   "VITE_SEO_SITE_DESCRIPTION": "Percolator - Trade the Future of DeFi on Solana",
   "VITE_SEO_SITE_URL": "https://percolator.trade",
