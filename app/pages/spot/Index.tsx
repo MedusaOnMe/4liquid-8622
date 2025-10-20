@@ -34,24 +34,25 @@ export default function SpotIndex() {
     <>
       {renderSEOTags(pageMeta, pageTitle)}
       <div className="spot-page-container">
-        {/* Animated Background */}
+        {/* Liquid Background */}
         <div className="spot-bg">
-          <div className="spot-gradient-orb spot-orb-1"></div>
-          <div className="spot-gradient-orb spot-orb-2"></div>
-          <div className="spot-gradient-orb spot-orb-3"></div>
-          <div className="spot-grid"></div>
+          <div className="spot-liquid-orb spot-liquid-orb-1"></div>
+          <div className="spot-liquid-orb spot-liquid-orb-2"></div>
+          <div className="spot-liquid-orb spot-liquid-orb-3"></div>
+          <div className="spot-ripple-grid"></div>
 
-          {/* Particle Effects */}
-          <div className="spot-particles">
-            {Array.from({ length: 20 }).map((_, i) => (
+          {/* Liquid Bubbles */}
+          <div className="spot-bubbles">
+            {Array.from({ length: 15 }).map((_, i) => (
               <div
                 key={i}
-                className="spot-particle"
+                className="spot-bubble"
                 style={{
                   left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 8}s`,
-                  animationDuration: `${8 + Math.random() * 12}s`,
+                  animationDelay: `${Math.random() * 10}s`,
+                  animationDuration: `${6 + Math.random() * 8}s`,
+                  width: `${10 + Math.random() * 30}px`,
+                  height: `${10 + Math.random() * 30}px`,
                 }}
               />
             ))}
@@ -60,6 +61,11 @@ export default function SpotIndex() {
 
         {/* Content */}
         <div className="spot-content">
+          <div className="spot-header">
+            <h1 className="spot-title">Spot Trading</h1>
+            <p className="spot-subtitle">Instant token swaps powered by Jupiter</p>
+          </div>
+
           {/* Jupiter Terminal Container */}
           <div
             id="jupiter-terminal-container"

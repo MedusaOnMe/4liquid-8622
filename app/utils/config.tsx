@@ -267,25 +267,13 @@ export const useOrderlyConfig = () => {
                     <path d="m4.42 4.73 4.633 6.194-4.662 5.037H5.44l4.082-4.41 3.298 4.41h3.57l-4.893-6.543 4.34-4.689h-1.05l-3.759 4.062-3.037-4.062zm1.543.772h1.64l7.244 9.686h-1.64z"></path>
                   </svg>
                 </a>
-                <button
-                  onClick={async () => {
-                    try {
-                      await navigator.clipboard.writeText('4U23WV4PPejzsZfo2VHqvT8pNhrGkx9SBkzooTFFpump');
-                    } catch (err) {
-                      console.error('Failed to copy:', err);
-                    }
-                  }}
-                  className="oui-flex oui-items-center oui-gap-1.5 oui-ml-2 oui-text-base-contrast-54 hover:oui-text-base-contrast-98 oui-transition-colors oui-cursor-pointer oui-font-mono oui-text-xs"
-                  aria-label="Copy contract address"
-                  title="4U23WV4PPejzsZfo2VHqvT8pNhrGkx9SBkzooTFFpump"
+                <div
+                  className="oui-flex oui-items-center oui-gap-1.5 oui-ml-2 oui-text-base-contrast-36 oui-font-mono oui-text-xs oui-cursor-default"
+                  title="Coming Soon"
                 >
                   <span className="oui-text-base-contrast-36">CA:</span>
-                  <span>4U23...pump</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                </button>
+                  <span>Coming Soon</span>
+                </div>
               </>
             )}
           </Flex>

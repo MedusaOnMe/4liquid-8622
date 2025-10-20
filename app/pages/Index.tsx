@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useState } from "react";
-import { Zap, Shield, TrendingUp, Copy, Check, Repeat } from "lucide-react";
+import { Droplets, Waves, Zap, ArrowRight, Globe } from "lucide-react";
 import { DEFAULT_SYMBOL } from "@/utils/storage";
 import { getPageMeta } from "@/utils/seo";
 import { getRuntimeConfig } from "@/utils/runtime-config";
@@ -12,7 +11,6 @@ export default function Index() {
   const pageMeta = getPageMeta();
   const appName = getRuntimeConfig("VITE_APP_NAME");
   const appDescription = getRuntimeConfig("VITE_APP_DESCRIPTION");
-  const [copied, setCopied] = useState(false);
 
   const handleEnterApp = () => {
     navigate(`/perp/${DEFAULT_SYMBOL}`);
@@ -22,16 +20,8 @@ export default function Index() {
     navigate('/spot');
   };
 
-  const contractAddress = "4U23WV4PPejzsZfo2VHqvT8pNhrGkx9SBkzooTFFpump";
-
   const handleCopyCA = async () => {
-    try {
-      await navigator.clipboard.writeText(contractAddress);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy:", err);
-    }
+    // Coming Soon - no copy functionality
   };
 
   return (
@@ -44,120 +34,135 @@ export default function Index() {
       )}
 
       <div className="landing-page">
-        {/* Animated Background */}
+        {/* Liquid Background */}
         <div className="landing-bg">
-          <div className="landing-gradient-orb landing-orb-1"></div>
-          <div className="landing-gradient-orb landing-orb-2"></div>
-          <div className="landing-gradient-orb landing-orb-3"></div>
-          <div className="landing-grid"></div>
+          <div className="landing-liquid-orb landing-liquid-orb-1"></div>
+          <div className="landing-liquid-orb landing-liquid-orb-2"></div>
+          <div className="landing-liquid-orb landing-liquid-orb-3"></div>
+          <div className="landing-liquid-orb landing-liquid-orb-4"></div>
+          <div className="landing-ripple-grid"></div>
 
-          {/* Particle Effects */}
-          <div className="landing-particles">
-            {Array.from({ length: 30 }).map((_, i) => (
+          {/* Liquid Bubbles */}
+          <div className="landing-bubbles">
+            {Array.from({ length: 25 }).map((_, i) => (
               <div
                 key={i}
-                className="landing-particle"
+                className="landing-bubble"
                 style={{
                   left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 8}s`,
-                  animationDuration: `${8 + Math.random() * 12}s`,
+                  animationDelay: `${Math.random() * 10}s`,
+                  animationDuration: `${6 + Math.random() * 8}s`,
+                  width: `${10 + Math.random() * 30}px`,
+                  height: `${10 + Math.random() * 30}px`,
                 }}
               />
             ))}
           </div>
         </div>
 
-        {/* Content */}
-        <div className="landing-content">
-          {/* Logo */}
-          <div className="landing-header">
-            <div className="landing-logo">
-              <img src="/logo.webp" alt="Percolator" className="landing-logo-img" />
+        {/* Hero Section - Split Layout */}
+        <div className="landing-hero">
+          {/* Left Side - Branding */}
+          <div className="landing-hero-left">
+            <div className="landing-brand">
+              <img src="/logo.webp" alt="Percoliquid" className="landing-brand-logo" />
+              <div className="landing-brand-title">
+                <h1 className="landing-brand-name">
+                  {"Percoliquid".split("").map((char, i) => (
+                    <span key={i} className="landing-letter" style={{ animationDelay: `${i * 0.08}s` }}>
+                      {char}
+                    </span>
+                  ))}
+                </h1>
+                <div className="landing-brand-tagline">
+                  <Droplets className="landing-tagline-icon" size={18} />
+                  <span>Liquid DeFi Trading</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="landing-hero-description">
+              Flow into the future of decentralized finance. Trade perpetuals and spot with unprecedented liquidity on Solana.
+            </p>
+
+            {/* Stats Grid */}
+            <div className="landing-stats">
+              <div className="landing-stat">
+                <Zap className="landing-stat-icon" size={20} />
+                <div className="landing-stat-content">
+                  <div className="landing-stat-value">{'<'}50ms</div>
+                  <div className="landing-stat-label">Execution</div>
+                </div>
+              </div>
+              <div className="landing-stat">
+                <Waves className="landing-stat-icon" size={20} />
+                <div className="landing-stat-content">
+                  <div className="landing-stat-value">Deep</div>
+                  <div className="landing-stat-label">Liquidity</div>
+                </div>
+              </div>
+              <div className="landing-stat">
+                <Globe className="landing-stat-icon" size={20} />
+                <div className="landing-stat-content">
+                  <div className="landing-stat-value">100x</div>
+                  <div className="landing-stat-label">Leverage</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Title with Character Animation */}
-          <h1 className="landing-title">
-            <span className="landing-title-line">
-              {"Trade the Future".split("").map((char, i) => (
-                <span key={i} className="landing-title-char" style={{ animationDelay: `${i * 0.05}s` }}>
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </span>
-            <span className="landing-title-line landing-title-highlight">
-              {"of DeFi".split("").map((char, i) => (
-                <span key={i} className="landing-title-char" style={{ animationDelay: `${(i + 15) * 0.05}s` }}>
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </span>
-          </h1>
-
-          {/* Subtitle with Typing Effect */}
-          <p className="landing-subtitle">
-            Experience lightning-fast perpetual trading with up to <span className="landing-leverage-highlight">100x</span> leverage on Solana
-          </p>
-
-          {/* CTA Buttons and X Icon */}
-          <div className="landing-cta-wrapper">
-            <button onClick={handleEnterApp} className="landing-cta">
-              <span className="landing-cta-glow"></span>
-              <span className="landing-cta-text">Perp Trading</span>
-              <svg className="landing-cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            <button onClick={handleSpotTrading} className="landing-cta landing-cta-secondary">
-              <span className="landing-cta-glow"></span>
-              <span className="landing-cta-text">Spot Trading</span>
-              <Repeat className="landing-cta-arrow" size={20} strokeWidth={2} />
-            </button>
-            <a
-              href="https://x.com/PercolatorDex"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="landing-x-icon"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-          </div>
-
-          {/* Features */}
-          <div className="landing-features">
-            <div className="landing-feature">
-              <div className="landing-feature-icon-wrapper">
-                <Zap className="landing-feature-icon" size={32} strokeWidth={2} />
+          {/* Right Side - CTA Card */}
+          <div className="landing-hero-right">
+            <div className="landing-cta-card">
+              <div className="landing-cta-card-header">
+                <h2 className="landing-cta-card-title">Start Trading</h2>
+                <p className="landing-cta-card-subtitle">Choose your trading mode</p>
               </div>
-              <div className="landing-feature-text">Instant Execution</div>
-            </div>
-            <div className="landing-feature">
-              <div className="landing-feature-icon-wrapper">
-                <Shield className="landing-feature-icon" size={32} strokeWidth={2} />
+
+              <div className="landing-cta-buttons">
+                <button onClick={handleEnterApp} className="landing-cta-primary">
+                  <div className="landing-cta-content">
+                    <div className="landing-cta-label">Perpetuals</div>
+                    <div className="landing-cta-desc">Trade with leverage</div>
+                  </div>
+                  <ArrowRight className="landing-cta-icon" size={24} />
+                </button>
+
+                <button onClick={handleSpotTrading} className="landing-cta-secondary">
+                  <div className="landing-cta-content">
+                    <div className="landing-cta-label">Spot</div>
+                    <div className="landing-cta-desc">Instant swaps</div>
+                  </div>
+                  <ArrowRight className="landing-cta-icon" size={24} />
+                </button>
               </div>
-              <div className="landing-feature-text">Secure Trading</div>
-            </div>
-            <div className="landing-feature">
-              <div className="landing-feature-icon-wrapper">
-                <TrendingUp className="landing-feature-icon" size={32} strokeWidth={2} />
+
+              {/* CA Section */}
+              <div className="landing-ca-section">
+                <div className="landing-ca-divider">
+                  <span>Contract Address</span>
+                </div>
+                <div className="landing-ca-button landing-ca-coming-soon">
+                  <span className="landing-ca-text">Coming Soon</span>
+                </div>
               </div>
-              <div className="landing-feature-text">100x Leverage</div>
+
+              {/* Social */}
+              <div className="landing-social">
+                <a
+                  href="https://x.com/PercoLiquid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="landing-social-link"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span>Follow us on X</span>
+                </a>
+              </div>
             </div>
           </div>
-
-          {/* CA Button - Full Address */}
-          <button onClick={handleCopyCA} className="landing-ca-button">
-            <span className="landing-ca-label">CA:</span>
-            <span className="landing-ca-address">{contractAddress}</span>
-            {copied ? (
-              <Check size={18} className="landing-ca-icon landing-ca-icon-copied" />
-            ) : (
-              <Copy size={18} className="landing-ca-icon" />
-            )}
-          </button>
         </div>
       </div>
     </>

@@ -1,0 +1,351 @@
+/* ========== SPOT PAGE - LIQUID THEME ========== */
+
+.spot-page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a1419 0%, #0d1117 50%, #0a1216 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Liquid Background */
+.spot-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.spot-liquid-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.3;
+  animation: spotLiquidFlow 22s ease-in-out infinite;
+}
+
+.spot-liquid-orb-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.45) 0%, rgba(6, 182, 212, 0.25) 50%, transparent 70%);
+  top: -15%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.spot-liquid-orb-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.35) 0%, rgba(20, 184, 166, 0.2) 50%, transparent 70%);
+  bottom: -20%;
+  right: -15%;
+  animation-delay: 7s;
+}
+
+.spot-liquid-orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.4) 0%, rgba(20, 184, 166, 0.18) 50%, transparent 70%);
+  top: 40%;
+  right: 30%;
+  animation-delay: 14s;
+}
+
+@keyframes spotLiquidFlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(50px, -60px) scale(1.1) rotate(90deg);
+  }
+  50% {
+    transform: translate(-35px, 50px) scale(0.92) rotate(180deg);
+  }
+  75% {
+    transform: translate(60px, 35px) scale(1.05) rotate(270deg);
+  }
+}
+
+/* Ripple Grid */
+.spot-ripple-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 80% 50%, rgba(94, 234, 212, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: spotRippleMove 28s linear infinite;
+}
+
+@keyframes spotRippleMove {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 60px 60px, -60px -60px;
+  }
+}
+
+/* Liquid Bubbles */
+.spot-bubbles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.spot-bubble {
+  position: absolute;
+  background: radial-gradient(circle at 30% 30%, rgba(94, 234, 212, 0.35), rgba(20, 184, 166, 0.18));
+  border-radius: 50%;
+  bottom: -50px;
+  box-shadow:
+    inset 0 0 15px rgba(255, 255, 255, 0.12),
+    0 0 15px rgba(20, 184, 166, 0.25);
+  animation: spotBubbleRise linear infinite;
+}
+
+@keyframes spotBubbleRise {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+    transform: translateX(0) scale(1);
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 110vh;
+    opacity: 0;
+    transform: translateX(calc(80px * var(--random, 0.5) - 40px)) scale(1.3);
+  }
+}
+
+/* Content */
+.spot-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: spotFadeIn 1s ease-out;
+}
+
+@keyframes spotFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.spot-header {
+  text-align: center;
+  animation: spotSlideDown 1s ease-out 0.2s both;
+}
+
+@keyframes spotSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spot-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 0.75rem 0;
+  background: linear-gradient(135deg,
+    rgb(20, 184, 166),
+    rgb(94, 234, 212),
+    rgb(6, 182, 212),
+    rgb(20, 184, 166)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: spotTitleGradient 6s ease-in-out infinite;
+}
+
+@keyframes spotTitleGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.spot-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Terminal Wrapper */
+.spot-terminal-wrapper {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  animation: spotScaleIn 1s ease-out 0.4s both;
+}
+
+@keyframes spotScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Jupiter Terminal Styling */
+#jupiter-terminal-container {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 600px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Jupiter root container with liquid theme */
+#jupiter-terminal-container > div {
+  width: 100% !important;
+  height: auto !important;
+  background: rgba(15, 20, 28, 0.85) !important;
+  border: 2px solid rgba(20, 184, 166, 0.3) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(20, 184, 166, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(20px) !important;
+  padding: 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+#jupiter-terminal-container > div:hover {
+  border-color: rgba(20, 184, 166, 0.4) !important;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(20, 184, 166, 0.2) !important;
+}
+
+/* Override any fixed heights */
+#jupiter-terminal-container * {
+  max-width: 100% !important;
+}
+
+/* Dropdown menus and modals */
+#jupiter-terminal-container div[role="dialog"],
+#jupiter-terminal-container div[role="menu"] {
+  background: rgba(22, 30, 37, 0.95) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 12px !important;
+}
+
+/* Jupiter buttons */
+#jupiter-terminal-container button {
+  transition: all 0.2s ease !important;
+}
+
+#jupiter-terminal-container button:hover {
+  transform: translateY(-1px) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .spot-page-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .spot-content {
+    max-width: 100%;
+  }
+
+  .spot-title {
+    font-size: 2rem;
+  }
+
+  .spot-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .spot-terminal-wrapper {
+    min-height: 550px;
+  }
+
+  #jupiter-terminal-container > div {
+    padding: 1.25rem !important;
+  }
+
+  .spot-liquid-orb {
+    filter: blur(70px);
+  }
+
+  .spot-liquid-orb-1 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .spot-liquid-orb-2 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .spot-liquid-orb-3 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .spot-page-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .spot-header {
+    padding: 0 0.5rem;
+  }
+
+  .spot-title {
+    font-size: 1.75rem;
+  }
+
+  .spot-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .spot-terminal-wrapper {
+    min-height: 500px;
+  }
+
+  #jupiter-terminal-container > div {
+    padding: 1rem !important;
+    border-radius: 16px !important;
+  }
+}

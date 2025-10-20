@@ -1,6 +1,6 @@
 {
-  "name": "percolator-dex",
-  "description": "Percolator - Lightning-fast perpetual trading on Solana",
+  "name": "percoliquid-dex",
+  "description": "Percoliquid - Liquid DeFi Trading on Solana",
   "private": true,
   "sideEffects": false,
   "type": "module",

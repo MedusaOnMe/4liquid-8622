@@ -1,4 +1,4 @@
-// Default trading pair for Percolator DEX
+// Default trading pair for Percoliquid DEX
 export const DEFAULT_SYMBOL = "PERP_SOL_USDC";
 export const ORDERLY_SYMBOL_KEY = "orderly-current-symbol";
 
