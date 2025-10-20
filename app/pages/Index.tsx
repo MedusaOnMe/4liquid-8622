@@ -18,7 +18,7 @@ export default function Index() {
     navigate(`/perp/${DEFAULT_SYMBOL}`);
   };
 
-  const contractAddress = "Coming Soon";
+  const contractAddress = "4U23WV4PPejzsZfo2VHqvT8pNhrGkx9SBkzooTFFpump";
 
   const handleCopyCA = async () => {
     try {
